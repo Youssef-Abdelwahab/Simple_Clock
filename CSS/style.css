@@ -71,35 +71,30 @@ body {
   border-radius: 50% 50% 0 0;
 }
 
-.c12 {
+.c12, .c3, .c6, .c9 {
   font-size: 50px;
   color: white;
   position: absolute;
+  font-family: cursive;
+}
+
+.c12 {
   left: 50%;
   transform: translate(-50%, 0%);
 }
 
 .c3 {
-  font-size: 50px;
-  color: white;
-  position: absolute;
   left: 100%;
   top: 50%;
   transform: translate(-150%, -50%);
 }
 
 .c9 {
-  font-size: 50px;
-  color: white;
-  position: absolute;
   top: 50%;
   transform: translate(50%, -50%);
 }
 
 .c6 {
-  font-size: 50px;
-  color: white;
-  position: absolute;
   left: 50%;
   top: 100%;
   transform: translate(-50%, -100%);
