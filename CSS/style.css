@@ -31,46 +31,6 @@ body {
   box-shadow: 0px 0px 40px 50px rgb(90, 84, 134);
 }
 
-.center {
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background-color: silver;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.containerHourHand {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  animation: clock 60s steps(60, end) infinite;
-}
-
-
-@keyframes clock {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.HourHand {
-  height: 10em;
-  width: 5px;
-  background-color: red;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  border-radius: 50% 50% 0 0;
-}
-
 .c12, .c3, .c6, .c9 {
   font-size: 50px;
   color: white;
@@ -98,4 +58,106 @@ body {
   left: 50%;
   top: 100%;
   transform: translate(-50%, -100%);
+}
+
+.center {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: silver;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.HourHand-hour {
+  height: 8em;
+  width: 12px;
+  background-color: rgb(53, 53, 65);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border-radius: 40% 40% 0 0;
+  border: 1px silver solid;
+}
+
+.containerHourHand_hour {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+/*   animation: hour 43200s infinite linear; */
+  animation: hour 3s infinite linear;
+  transform: rotate(-45deg);
+}
+
+@keyframes hour {
+  from {
+    transform: rotate(-45deg);
+  }
+
+  to {
+    transform: rotate(315deg);
+  }
+}
+
+.HourHand-minute {
+  height: 11em;
+  width: 10px;
+  background-color: rgb(53, 53, 65);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border-radius: 40% 40% 0 0;
+  border: 1px silver solid;
+}
+
+.containerHourHand_minute {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+/*   animation: minute 3600s infinite linear; */
+  animation: minute 2s infinite linear;
+  transform: rotate(45deg);
+}
+
+@keyframes minute {
+  from {
+    transform: rotate(45deg);
+  }
+
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+.HourHand-second {
+  height: 10em;
+  width: 5px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border-radius: 50% 50% 0 0;
+}
+
+.containerHourHand_second {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /* animation: second 60s steps(60, end) infinite; */
+  animation: second 1s infinite linear;
+}
+
+@keyframes second {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
